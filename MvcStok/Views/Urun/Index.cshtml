@@ -1,0 +1,46 @@
+﻿@using MvcStok.Models.Entity
+@model List<TBLURUNLER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<table id="tbl1 " class="table table-bordered">
+    <thead>
+
+        <tr>
+            <th> ÜRÜN ID</th>
+            <th> ÜRÜN ADI</th>
+            <th> MARKASI</th>
+            <th> KATEGORİ</th>
+            <th> FİYAT</th>
+            <th> SİL</th>
+            <th> GÜNCELLE</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var URN in Model)
+        {
+            <tr>
+                <th>@URN.URUNID</th>
+                <td>@URN.URUNAD</td>
+                <td>@URN.MARKA</td>
+                <td>@URN.TBLKATEGORILER.KATEGORIAD</td>
+                <td>@URN.FIYAT</td>
+                <td>@URN.STOK</td>
+                <td><a href="/URUN/SIL/@URN.URUNID" class="btn btn-danger">SİL</a></td>
+                <td><a href="/URUN/UrunGetir/@URN.URUNID" class="btn btn-success">GÜNCELLE</a></td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+<a href="/URUN/UrunEkle/" class=" btn btn-warning">YENİ ÜRÜN EKLE</a>
+<link href="~/Content/DataTables/css/buttons.bootstrap4.css" rel="stylesheet" />
+
+<script>
+    $('#tbl1').DataTable();
+</script>

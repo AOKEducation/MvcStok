@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
+    Hakkımda
+
+</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="modal-title">Ali Osman Kahveci</h2>
+            </div>
+
+            <form>
+                @*<div class="modal-body">
+
+            <picture>
+                <img src="~/Content/Images/AliOsmanKahveci.png"
+                     class="img-fluid rounded mb-3"
+                     alt="Ali Osman Kahveci" />
+            </picture>
+
+            <label>
+                Bu Proje 50 Derste MVC Eğitimi kapsamında Hazırlanmıştır. <br /> <br />
+                Hızlı ve güvenilir eğitimin doğru adresi <br />
+                Murat Yücedağ M&Y Akademi ile daha da ileriye <br /><br /><br />
+            </label>
+
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">
+                Tamamdır Anlaşıldı :)
+            </button>
+        </div>*@
+
+                <div class="modal-body">
+                    <div class="row">
+
+                        <!-- Sol taraf: Fotoğraf -->
+                        <div class="col-sm-4 text-center">
+                            <img src="@Url.Content("~/Content/Images/aliosmankahveci.png")"
+                                 alt="Ali Osman Kahveci"
+                                 class="img-thumbnail img-responsive"
+                                 style="max-width: 80%; height: auto;" />
+                        </div>
+
+                        <!-- Sağ taraf: Yazılar -->
+                        <div class="col-sm-8">
+                            <p style="font-weight:bold; margin-top:10px;">
+                                Bu Proje 50 Derste MVC Eğitimi kapsamında Hazırlanmıştır.
+                            </p>
+
+                            <p style="font-weight:bold;">
+                                Hızlı ve güvenilir eğitimin doğru adresi <br />
+                                Murat Yücedağ M&Y Akademi ile daha da ileriye
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">
+                        Tamamdır Anlaşıldı :)
+                    </button>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
